@@ -1,88 +1,31 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>시간표와 미디어</title> 
+  <meta charset="UTF-8">
+  <title>로그인</title>
 </head>
-
 <body>
-<h1>나의 시간표</h1>
-<table border="1">
-  <tr>
-    <th>교시</th>
-    <th>월</th>
-    <th>화</th>
-    <th>수</th>
-    <th>목</th>
-    <th>금</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>국사2</td>
-    <td>진로</td>
-    <td>대수</td>
-    <td>문학</td>
-    <td>국사2</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>문학</td>
-    <td>문학</td>
-    <td>국사2</td>
-    <td>대수</td>
-    <td>중국어</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>스포츠</td>
-    <td>빅분</td>
-    <td>빅분</td>
-    <td>응화</td>
-    <td>문학</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>중국어</td>
-    <td>빅분</td>
-    <td>빅분</td>
-    <td>응화</td>
-    <td>대수</td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>응화</td>
-    <td>사회</td>
-    <td>스포츠</td>
-    <td>스포츠</td>
-    <td>창체</td>
-  </tr>
-  <tr>
-    <td>6</td>
-    <td>응화</td>
-    <td>대수</td>
-    <td>사회</td>
-    <td>중국어</td>
-    <td>창체</td>
-  </tr>
-  <tr>
-    <td>7</td>
-    <td></td>
-    <td>중국어</td>
-    <td></td>
-    <td>사회</td>
-    <td></td>
-  </tr>
-</table>
 
-  <h1>동영상</h1>
-  <video src= "저작권 삭제" width="400" controls>
-  </video>
+  <h1>로그인</h1>
 
-  <h1>소리</h1>
+  <from action="4b_logln_success.html"method="get">
 
-  <audio src="sample.mp3" controls>
-  </audio>
+    <p>
+      <table for="userld">아이디</table><br>
+      <input type="text"id="userid"name="userid"placeholder="아이디를 입력하세요">
+    </p>
 
-  
+    <p>
+      <table for="userpw">비밀번호</table><br>
+      <label for="password"id="userpw"name="userpw"placeholder="비밀번호를 입력하세요">
+    </p>
+
+    <p>
+      <input type="checkbox"id="remeber"name="remember">
+      <label for="remeber">아이디 저장</label>
+    </p>
+
+    <button type="submit">로그인</button>
+</from>
 </body>
 </html>
