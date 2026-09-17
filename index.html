@@ -1,53 +1,78 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8">
-    <title>예시1- 레이아웃을 div로 나누기</title>
+<head>
+  <meta charset="UTF-8>
+    <title>예시 2 - 카드 단위로 div 나누기</title>
     <style>
-      *{box-sizing:vorder-box;}
-      body {font-family:sans-serif: margin: 0;
-      .header {background:#4a90e2; color: white; padding:20px; text-align:center;}
-      .nav {background:#333; padding: 10px;}
-      .nav a {colr:white; margin: 0 15px; text-decoration:none;}
-      .container {display:flex;}
-      .main {background:#f4f4f4; padding 20px; flex: 3;}
-      .sidebar {background:#dcdcdc; padding: 20px; flex: 1;}
-      .footer {background:#333; color: white; text-align: center; padding: 10px;}
+    *{box-sizing: border-box;}
+    body {font-family: sans-serif; background:#eee; margin: 0; padding: 30px;}
+
+    .card-list {
+    dispaly:flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    }
+    /*카드 하나 = 콘텐츠 묶음 div */
+    .card {
+    backgrounf:white;
+    width: 220px;
+    border-raius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 6 px rgba(0,0,0,.15);
+    }
+
+    /* 카드 내부를 다시 이미지영역 / 텍스트 영역으로 나눈 중첩 div */
+
+    .card-image{
+    background:4a90e2;
+    color:white;
+    height:100px;
+    allgn-items: center;
+    justify-content:center;
+    font-size: 14px;
+    }
+    .card-body{
+    padding:15px;
+    }
+    .card-body h3 {margin:0 0 8px; }
+    .card-body p {margin:0, font-size: 14px; color:#555;}
     </style>
-  </head>
-  <body>
-    <!--1.헤더 영역-->
-    <div class="header">
-      <h1>내 웹사이트</h1>
+    </head>
+    <body>
+
+    <h2>학생 소개 카드</h2>
+
+    !-- 카드 여러 개를 감싸는 큰 div -->
+    <div class="card-list">
+
+
+      <!-- 카드 1 -->
+  <div class="card">
+    <div class="card-image">사진자리</div>
+    <div class="card-body">
+      <h3>이름: 홍길동</h3>
+      <p>관심 분야: 인공지능</p>
     </div>
+  </div>
 
-    <!--2. 네비게이션 영역-->
-    <div class="nav">
-      <a href="#">홈</a>
-       <a href="#">소개</a>
-       <a href="#">연락처</a>
+  <!-- 카드 2 -->
+  <div class="card">
+    <div class"card-image">사진 자리</div>
+  <h3>이름 김영희</h3>
+  <p>괸심 분야: 로봇공학</p>
+  </div>
+</div>
+
+  <!--카드 3 -->
+  <div class="card">
+    <div class="card-image">사진 자리</div>
+    <div class="card-body">
+     <h3>이름: 박철수</h3>
+      <p>관심 분야: 게임 개발</p>
     </div>
+  </div>
 
-    <!--3.본문+사이드바를 감싸는 큰 div-->
-    <div class="container">
-
-      <!--3-2.사이드바 영역-->
-      <div class="main">
-        <h2>본문 내용</h2>
-        <p>이 부분에 주요 글이나 이미지가 들어갑니다.</p>
-      </div>
-
-      <!--3-2. 사이드 영역-->
-      <div class="sidebar">
-        <h3>사이드바</h3>
-        <p>공지, 광고,링크목록 등</p>
-      </div>
-
-      <div>
-        <!--4.푸터 영역-->
-        <div class="footer">
-          <p>&copy;2026내 웹사이트</p>
-      </div>
-        
+</div>
+    
   </body>
-      </html>
+</html>
