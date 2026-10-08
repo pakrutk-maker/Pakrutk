@@ -3,46 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>영화 추천 사이트</title>
+    <title>영화 추천 사이트 - 수행평가</title>
+    <!-- link 태그 -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- 1. 본문 영역 (전체 너비의 80% 차지) -->
-        <main class="main-content">
-            <!-- 3. 헤더 영역 (영화 제목/감독 검색) -->
+    <!-- id 및 class 사용 -->
+    <div id="main-container" class="container">
+        
+        <!-- 1. 본문 영역 (너비 80%) -->
+        <main id="main-content" class="main-section">
+            <!-- h1, p, br 태그 -->
+            <h1>영화 추천 사이트</h1>
+            <p>인공지능 기반 맞춤형 영화 추천 서비스입니다.<br>좋아하는 장르와 영화를 검색해 보세요.</p>
+
+            <!-- 3. 헤더 영역 (검색창) -->
             <header class="header-area">
-                <input type="text" placeholder="원하는 영화 제목이나 감독 이름을 검색하세요">
+                <input type="text" placeholder="원하는 영화 제목이나 감독 이름으로 검색">
                 <button type="button">검색</button>
             </header>
 
-            <!-- 4. 콘텐츠 구성 (랜덤 영화 추천 카드 목록) -->
-            <section class="content-area">
-                <div class="movie-card">랜덤 추천 영화 1</div>
-                <div class="movie-card">랜덤 추천 영화 2</div>
-                <div class="movie-card">랜덤 추천 영화 3</div>
-                <div class="movie-card">랜덤 추천 영화 4</div>
-            </section>
-        </main>
-
-        <!-- 2. 사이드 메뉴 영역 (전체 너비의 20% 차지) -->
-        <aside class="sidebar-area">
-            <!-- 5. 관심 영역 (원하는 장르만 추천해주는 동그라미 버튼) -->
-            <div class="interest-area">
-                <div class="genre-item">액션</div>
-                <div class="genre-item">스릴러</div>
-                <div class="genre-item">SF</div>
-                <div class="genre-item">코미디</div>
+            <!-- img 태그 (alt 속성 포함) -->
+            <div class="banner-box">
+                <img src="https://via.placeholder.com/800x200/8B0000/FFFFFF?text=Movie+Recommendation+Banner" alt="영화 추천 사이트 메인 배너 이미지">
             </div>
 
-            <!-- 2. 사이드 메뉴 (로그인, 회원가입, 사이트 접근) -->
+            <!-- 4. 콘텐츠 구성 (ol, li 순서 있는 목록) -->
+            <h2>오늘의 추천 영화 순위</h2>
+            <ol class="movie-list">
+                <li class="movie-card">인터스텔라 (SF / 드라마)</li>
+                <li class="movie-card">다크 나이트 (액션 / 스릴러)</li>
+                <li class="movie-card">기생충 (드라마 / 블랙코미디)</li>
+                <li class="movie-card">인셉션 (SF / 액션)</li>
+            </ol>
+
+            <!-- 표 태그 (table, tr, th, td) -->
+            <h2>영화 업데이트 및 진행 일정</h2>
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>날짜</th>
+                        <th>장르</th>
+                        <th>업데이트 내용</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10월 8일</td>
+                        <td>SF / 액션</td>
+                        <td>신작 영화 DB 업데이트</td>
+                    </tr>
+                    <tr>
+                        <td>10월 15일</td>
+                        <td>스릴러</td>
+                        <td>맞춤 추천 알고리즘 개선</td>
+                    </tr>
+                    <tr>
+                        <td>10월 16일</td>
+                        <td>전체</td>
+                        <td>인기 장르 순위 리뉴얼</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- span 태그 및 학번/이름 명시 -->
+            <p class="student-info">제작자: <span>20612 박수한</span></p>
+        </main>
+
+        <!-- 2. 사이드 메뉴 (너비 20%) -->
+        <aside id="sidebar" class="sidebar-section">
+            <!-- 5. 관심 영역 (ul, li 순서 없는 목록) -->
+            <h3>관심 장르</h3>
+            <ul class="interest-list">
+                <li class="genre-item">액션</li>
+                <li class="genre-item">스릴러</li>
+                <li class="genre-item">SF</li>
+                <li class="genre-item">코미디</li>
+            </ul>
+
+            <h3>사이드 메뉴 및 링크</h3>
+            <!-- a 태그 (외부 링크 포함) -->
             <nav class="side-menu">
+                <a href="https://www.google.com" target="_blank" class="ext-link">구글 외부 링크</a>
+                <a href="https://osani-h.goehs.kr/" target="_blank" class="ext-link">오산정보고등학교</a>
                 <a href="#">로그인</a>
                 <a href="#">회원가입</a>
-                <a href="#">사이트 소개</a>
-                <a href="#">마이페이지</a>
             </nav>
         </aside>
+
     </div>
 </body>
 </html>
