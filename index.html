@@ -3,91 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS 스타일 비교 실습</title>
-    <!-- 아래 href의 파일명을 style1.css, style2.css, style3.css로 바꾸며 확인하세요 -->
-    <link rel="stylesheet" href="style3.css">
+    <title>영화 추천 사이트</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <!-- 1. 본문 영역 (전체 너비의 80% 차지) -->
+        <main class="main-content">
+            <!-- 3. 헤더 영역 (영화 제목/감독 검색) -->
+            <header class="header-area">
+                <input type="text" placeholder="원하는 영화 제목이나 감독 이름을 검색하세요">
+                <button type="button">검색</button>
+            </header>
 
-    <header>
-        <nav>
-            <div class="logo">CSS LAB</div>
-            <ul>
-                <li><a href="#">홈</a></li>
-                <li><a href="#">소개</a></li>
-                <li><a href="#">프로젝트</a></li>
-                <li><a href="#">연락처</a></li>
-            </ul>
-        </nav>
-    </header>
+            <!-- 4. 콘텐츠 구성 (랜덤 영화 추천 카드 목록) -->
+            <section class="content-area">
+                <div class="movie-card">랜덤 추천 영화 1</div>
+                <div class="movie-card">랜덤 추천 영화 2</div>
+                <div class="movie-card">랜덤 추천 영화 3</div>
+                <div class="movie-card">랜덤 추천 영화 4</div>
+            </section>
+        </main>
 
-    <main>
-        <section class="hero">
-            <h1>하나의 HTML, 세 가지 스타일</h1>
-            <p>CSS 파일만 교체해도 웹페이지의 디자인과 분위기가 완전히 달라집니다.</p>
-            <div class="btn-group">
-                <button class="btn-primary">주요 버튼</button>
-                <button class="btn-secondary">보조 버튼</button>
+        <!-- 2. 사이드 메뉴 영역 (전체 너비의 20% 차지) -->
+        <aside class="sidebar-area">
+            <!-- 5. 관심 영역 (원하는 장르만 추천해주는 동그라미 버튼) -->
+            <div class="interest-area">
+                <div class="genre-item">액션</div>
+                <div class="genre-item">스릴러</div>
+                <div class="genre-item">SF</div>
+                <div class="genre-item">코미디</div>
             </div>
-        </section>
 
-        <section class="grid-container">
-            <article class="card">
-                <h2>1. 웹 표준 요소</h2>
-                <p>HTML은 구조를 담당하고, CSS는 <span>시각적 스타일</span>을 담당합니다.</p>
-                <blockquote>"디자인은 단순히 어떻게 보이고 느껴지는가가 아니라, 어떻게 작동하는가이다."</blockquote>
-                <h3>학습 목록</h3>
-                <ul>
-                    <li>HTML5 시맨틱 태그</li>
-                    <li>CSS3 스타일링 및 레이아웃</li>
-                    <li>반응형 웹 디자인 기본</li>
-                </ul>
-            </article>
-
-            <article class="card">
-                <h2>2. 폼 & 데이터 표</h2>
-                <form onsubmit="return false;">
-                    <div class="form-group">
-                        <label for="username">사용자 이름</label>
-                        <input type="text" id="username" placeholder="이름을 입력하세요">
-                    </div>
-                    <div class="form-group">
-                        <label for="role">구분</label>
-                        <select id="role">
-                            <option>학생</option>
-                            <option>강사</option>
-                        </select>
-                    </div>
-                </form>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>과목</th>
-                            <th>상태</th>
-                            <th>태그</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>HTML</td>
-                            <td>완료</td>
-                            <td><span class="badge success">기본</span></td>
-                        </tr>
-                        <tr>
-                            <td>CSS</td>
-                            <td>진행 중</td>
-                            <td><span class="badge warning">스타일</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </article>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 웹 프로그래밍 실습 페이지. All rights reserved.</p>
-    </footer>
-
+            <!-- 2. 사이드 메뉴 (로그인, 회원가입, 사이트 접근) -->
+            <nav class="side-menu">
+                <a href="#">로그인</a>
+                <a href="#">회원가입</a>
+                <a href="#">사이트 소개</a>
+                <a href="#">마이페이지</a>
+            </nav>
+        </aside>
+    </div>
 </body>
 </html>
