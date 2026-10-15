@@ -3,38 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트 연동 페이지</title>
+    <title>영화 추천 사이트 - 수행평가</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="main-container" class="container">
+        
+        <!-- 1. 본문 영역 (80%) -->
+        <main id="main-content" class="main-section">
+            <h1>영화 추천 사이트</h1>
+            
+            <!-- JS 연동: 색 바꾸기 (#text_message) -->
+            <p id="text_message" style="cursor: pointer; font-weight: bold; margin-bottom: 15px;">
+                🎬 클릭하면 색상이 변하는 오늘의 영화 추천 문구! (여기를 클릭해 보세요)
+            </p>
 
-    <!-- 1. 로그인 영역 (#loginForm, #user_Id, #user_Pw) -->
-    <section>
-        <h2>로그인</h2>
-        <form id="loginForm">
-            <input type="text" id="user_Id" placeholder="아이디 입력">
-            <input type="password" id="user_Pw" placeholder="비밀번호 입력">
-            <button type="submit">로그인</button>
-        </form>
-    </section>
+            <!-- 검색창 -->
+            <header class="header-area">
+                <input type="text" placeholder="원하는 영화 제목이나 감독 이름으로 검색">
+                <button type="button">검색</button>
+            </header>
 
-    <hr>
+            <!-- 배너 이미지 -->
+            <div class="banner-box">
+                <img src="https://via.placeholder.com/800x200/8B0000/FFFFFF?text=Movie+Recommendation+Banner" alt="영화 추천 사이트 메인 배너 이미지">
+            </div>
 
-    <!-- 2. 카운터 영역 (#counter, #count_number) -->
-    <section>
-        <h2>카운터</h2>
-        <button id="counter">counter</button>
-        <label id="count_number">0번 클릭</label>
-    </section>
+            <!-- 유튜브 스타일 영화 카드 그리드 -->
+            <h2>오늘의 랜덤 추천 영화</h2>
+            <div class="movie-grid">
+                <div class="movie-card">
+                    <div class="thumbnail-wrapper">
+                        <img src="https://via.placeholder.com/300x170/8B0000/FFFFFF?text=Interstellar" alt="인터스텔라">
+                        <span class="badge">추천</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">인터스텔라</h3>
+                        <p class="movie-director">크리스토퍼 놀란 감독</p>
+                        <p class="movie-details"><span class="genre-tag">SF</span> • 평점 9.5</p>
+                    </div>
+                </div>
 
-    <hr>
+                <div class="movie-card">
+                    <div class="thumbnail-wrapper">
+                        <img src="https://via.placeholder.com/300x170/8B0000/FFFFFF?text=The+Dark+Knight" alt="다크 나이트">
+                        <span class="badge">BEST</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">다크 나이트</h3>
+                        <p class="movie-director">크리스토퍼 놀란 감독</p>
+                        <p class="movie-details"><span class="genre-tag">액션</span> • 평점 9.3</p>
+                    </div>
+                </div>
 
-    <!-- 3. 색 바꾸기 영역 (#text_message) -->
-    <section>
-        <h2>색 바꾸기</h2>
-        <p id="text_message" style="cursor: pointer;">이 글자를 클릭하면 색상이 랜덤하게 변경됩니다.</p>
-    </section>
+                <div class="movie-card">
+                    <div class="thumbnail-wrapper">
+                        <img src="https://via.placeholder.com/300x170/8B0000/FFFFFF?text=Parasite" alt="기생충">
+                        <span class="badge">HOT</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">기생충</h3>
+                        <p class="movie-director">봉준호 감독</p>
+                        <p class="movie-details"><span class="genre-tag">드라마</span> • 평점 9.1</p>
+                    </div>
+                </div>
+            </div>
 
-    <!-- 자바스크립트 파일 연결 (script.js 파일 경로 지정) -->
+            <!-- 일정 표 -->
+            <h2>영화 업데이트 일정</h2>
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>날짜</th>
+                        <th>장르</th>
+                        <th>업데이트 내용</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10월 8일</td>
+                        <td>SF / 액션</td>
+                        <td>신작 영화 DB 업데이트</td>
+                    </tr>
+                    <tr>
+                        <td>10월 15일</td>
+                        <td>스릴러</td>
+                        <td>맞춤 추천 알고리즘 개선</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 제작자 정보 -->
+            <p class="student-info">제작자: <span>20612 박수한</span></p>
+        </main>
+
+        <!-- 2. 사이드 메뉴 영역 (20%) -->
+        <aside id="sidebar" class="sidebar-section">
+            
+            <!-- JS 연동 1: 로그인 영역 (#loginForm, #user_Id, #user_Pw) -->
+            <div class="sidebar-box">
+                <h3>로그인</h3>
+                <form id="loginForm">
+                    <input type="text" id="user_Id" placeholder="아이디 (pakrutk)" required>
+                    <input type="password" id="user_Pw" placeholder="비밀번호 (helloworld)" required>
+                    <button type="submit" class="side-btn">로그인</button>
+                </form>
+            </div>
+
+            <!-- JS 연동 2: 카운터 영역 (#counter, #count_number) -->
+            <div class="sidebar-box">
+                <h3>사이트 응원하기</h3>
+                <button id="counter" class="side-btn">counter</button>
+                <div class="count-display">
+                    <label id="count_number">0번 클릭</label>
+                </div>
+            </div>
+
+            <!-- 관심 장르 -->
+            <div class="sidebar-box">
+                <h3>관심 장르</h3>
+                <ul class="interest-list">
+                    <li class="genre-item">액션</li>
+                    <li class="genre-item">스릴러</li>
+                    <li class="genre-item">SF</li>
+                </ul>
+            </div>
+
+            <!-- 외부 링크 -->
+            <div class="sidebar-box">
+                <h3>관련 링크</h3>
+                <nav class="side-menu">
+                    <a href="https://www.google.com" target="_blank" class="ext-link">구글 외부 링크</a>
+                    <a href="https://osani-h.goehs.kr/" target="_blank" class="ext-link">오산정보고등학교</a>
+                </nav>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <!-- JS 파일 연결 -->
     <script src="script.js"></script>
 </body>
 </html>
