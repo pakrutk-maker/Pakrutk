@@ -1,5 +1,5 @@
-const id="pakrutk";
-const pw="ospakrutk";
+const id="junamsu";
+const pw="helloworld";
 
 //로그인
 const loginForm = document.querySelector("#loginForm");
@@ -15,3 +15,23 @@ loginForm.onsubmit = function (e) {
     alert("로그인 실패: 아이디 또는 비밀번호가 틀렸습니다.");
   }
 };
+
+
+//카운터
+let counter = document.querySelector("#counter");
+let number=0;
+let count_number = document.querySelector("#count_number");
+counter.onclick=function()
+{
+  number=number+1;
+  count_number.textContent=number+"번 클릭";
+}
+
+//색 바꾸기
+let text_message = document.querySelector('#text_message');
+  text_message.onclick = function () {
+    const r = Math.floor(Math.random()*256);
+    const g = Math.floor(Math.random()*256);
+    const b = Math.floor(Math.random()*256);
+    text_message.style.color = 'rgb(' + r + ',' + g + ',' + b + ')';
+  };
